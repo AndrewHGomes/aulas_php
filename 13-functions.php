@@ -33,8 +33,14 @@
     function variadicParams(...$args)
     {
       foreach ($args as $arg) {
-        echo "<span>$arg </span>";
+        echo "<span>$arg | </span>";
       }
+      echo "<span>Número de parâmetros: " . func_num_args();
+    }
+
+    function withReturn($a, $b)
+    {
+      return $a + $b;
     }
 
     ?>
@@ -43,6 +49,7 @@
     <p>Função com parâmetros: <?= withParams(51, 23) ?></p>
     <p>Função com parâmetro padrão: <?= defaultParams('Henrique') ?> | <?= defaultParams() ?></p>
     <p>Recebendo vários parâmentros: <?= variadicParams('teste', 50, true) ?></p>
+    <p>Retorno da função: <?= withReturn(11, 11) ?></p>
 
   </main>
 </body>

@@ -109,6 +109,31 @@
 
     <h2>Return</h2>
 
+    <?php
+
+    function withReturn()
+    {
+      return $a = 'teste';
+    }
+
+    function returnWithParam($nome)
+    {
+      return "Meu nome é $nome";
+    }
+
+    $andrew = returnWithParam('Andrew');
+    $viviane = returnWithParam('Viviane');
+
+    ?>
+
+    <p>
+      Retornando este valor: <?= withReturn() ?>
+    </p>
+
+    <p>
+      Retornando valores com argumentos: <?= $andrew ?> | <?= $viviane ?>
+    </p>
+
   </main>
 </body>
 

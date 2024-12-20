@@ -14,29 +14,28 @@
   <main>
     <?php
 
-    class Humano
+    class Veiculo
     {
-      public $nome, $sobrenome;
+      public $tipo;
+      public $rodas;
+      public $portas;
 
-      public function __construct($nome, $sobrenome)
+      public function __construct($tipo, $rodas, $portas)
       {
-        $this->nome = $nome;
-        $this->sobrenome = $sobrenome;
-      }
-
-      public function nomeCompleto()
-      {
-        return "{$this->nome} {$this->sobrenome}";
+        $this->tipo = $tipo;
+        $this->rodas = $rodas;
+        $this->portas = $portas;
       }
     }
 
-    $andrew = new Humano('Andrew', 'Gomes');
-    $viviane = new Humano('Viviane', 'Rodrigues');
+    $carro = new Veiculo('Carro', 4, 4);
+
+    $moto = new Veiculo('Moto', 2, false);
 
     ?>
 
-    <p>1º objeto da classe Humano: <?= $andrew->nomeCompleto() ?></p>
-    <p>2º objeto da classe Humano: <?= $viviane->nomeCompleto() ?></p>
+    <p>1º objeto da classe Veículo: <?= $carro ?></p>
+    <p>2º objeto da classe Veículo: <?= $moto ?></p>
 
   </main>
 </body>

@@ -13,42 +13,80 @@
   </header>
   <main>
 
+    <h2>Escopo Global</h2>
+
     <?php
 
-    $variavelGlobal = 'Variável global';
+    $variavelGlobal = 'No escopo global';
 
-    function testeEscopo($a)
+    ?>
+
+    <p>
+      Variável: <?= $variavelGlobal ?>
+    </p>
+
+    <?php
+
+    function escopoFuncao($param)
     {
-      $teste = 'Variável local';
-      echo "$teste | $a";
-    }
-
-    function globalEmLocal()
-    {
-      global $variavelGlobal;
-      echo "Peguei a $variavelGlobal";
-    }
-
-    function globalEmLocal2()
-    {
-      $GLOBALS['variavelGlobal'] = 'Variável Global';
-    }
-
-    if (true) {
-      $varIf = 'Variável IF';
-    }
-
-    for ($i = 0; $i < 2; $i++) {
-      $varFor = 'Variável FOR';
+      $arg = 'Variável é local';
+      echo "$param é local | ";
+      return $arg;
     }
 
     ?>
 
-    <p>Escopo global: <?= $variavelGlobal ?></p>
-    <p>Escopo da função: <?= testeEscopo('Parâmetro local') ?></p>
-    <p>Pegando variável global na função: <?= globalEmLocal() ?></p>
-    <p>Pegando variável global na função de outra forma: <?= globalEmLocal2() ?></p>
-    <p>Escopo em controle e repetições: <?= $varIf ?> | <?= $varFor ?> | <?= $i ?></p>
+    <p>
+      Escopo de função: <?= escopoFuncao('Parâmetro/Argumento') ?>
+    </p>
+
+    <hr>
+
+    <h2>global</h2>
+
+    <?php
+
+    $variavelQualquer = 100;
+
+    echo "<p>Escopo global: $variavelQualquer</p>";
+
+    function trazendoValorGlobal()
+    {
+      global $variavelQualquer;
+      $variavelQualquer = 'testada dentro da função';
+    }
+
+    trazendoValorGlobal();
+
+    ?>
+
+    <p>
+      A mesma variável: <?= $variavelQualquer ?>
+    </p>
+
+    <hr>
+
+    <h2>Globals[]</h2>
+
+    <?php
+
+    $outraVariavel = 'Mais uma global';
+
+    echo "<p>$outraVariavel</p>";
+
+    function testeGlobals()
+    {
+      // $outraVariavel = 'Deu certo!!!';
+      $GLOBALS['outraVariavel'] = 'Agora deu mesmo!!!';
+    }
+
+    testeGlobals();
+
+    ?>
+
+    <p>
+      Foi? <?= $outraVariavel ?>
+    </p>
 
   </main>
 </body>

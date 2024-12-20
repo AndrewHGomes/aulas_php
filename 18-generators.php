@@ -16,29 +16,28 @@
 
     function buscarNumero()
     {
-      for ($i = 0; $i <= 3; $i++) {
+      for ($i = 0; $i <= 5; $i++) {
         yield $i;
       }
     }
 
     foreach (buscarNumero() as $numero) {
-      echo "$numero | ";
+      echo "<span>$numero | </span>";
     }
 
     function buscarNome()
     {
-      yield 'Andrew';
-      yield from ['Viviane', 'Rafael'];
-      yield 'Irvin';
+      yield "Andrew";
+      yield from ["Viviane", "Rafael"];
+      yield "Irvin";
     }
 
-    foreach (buscarNome() as $nome) {
-      echo "$nome | ";
-    }
+    // foreach (buscarNome() as $nome) {
+    //   echo "<span>$nome | </span>";
+    // }
 
     ?>
 
-    <p>Pegando valor yield com um foreach: <?= $numero ?></p>
   </main>
 </body>
 

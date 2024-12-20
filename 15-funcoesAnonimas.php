@@ -13,19 +13,53 @@
   </header>
   <main>
 
+    <h2>Anônima Simples</h2>
+
     <?php
 
     $simples = function () {
       echo 'Função simples';
     };
 
+    ?>
+
+    <p>
+      Simples e fácil: <?= $simples() ?>
+    </p>
+
+    <hr>
+
+    <h2>Anônima com parâmetro</h2>
+
+    <?php
+
     $parametro = function ($param) {
       echo $param;
     };
 
+    ?>
+
+    <p>Anônima recebendo argumento: <?= $parametro('Com parâmetro') ?></p>
+
+    <hr>
+
+    <h2>Anônima com retorno</h2>
+
+    <?php
+
     $retorno = function ($arg) {
       return $arg;
     };
+
+    ?>
+
+    <p>Anônima retornando valor: <?= $retorno('Retornando valor') ?></p>
+
+    <hr>
+
+    <h2>Anônima como parâmetro/argumento</h2>
+
+    <?php
 
     $teste = function () {
       return 'Função como argumento';
@@ -38,9 +72,6 @@
 
     ?>
 
-    <p>Função anônima simples: <?= $simples() ?></p>
-    <p>Função anônima com argumento: <?= $parametro('Com parâmetro') ?></p>
-    <p>Função anônima com retorno: <?= $retorno('Retornando valor') ?></p>
     <p>Função anônima como parâmentro de outra função: <?= argFunction($teste()) ?></p>
 
   </main>

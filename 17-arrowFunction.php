@@ -17,7 +17,7 @@
     $x = 15;
     $y = 22;
 
-    $minhaArrow = fn($z) => "$x | $y | $z";
+    $minhaArrow = fn($z) => $z;
 
     ?>
 

@@ -1,10 +1,3 @@
-<?php
-
-$paisOrigem = 'EUA';
-$nacionalidade = '';
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -21,6 +14,9 @@ $nacionalidade = '';
   <main>
 
     <?php
+
+    $paisOrigem = 'EUA';
+    $nacionalidade = '';
 
     switch ($paisOrigem) {
       case 'Brasil':
@@ -41,8 +37,8 @@ $nacionalidade = '';
 
     ?>
 
-    <p>País de origem: <?= $paisOrigem ?></p>
-    <p>$nacionalidade: <?= $nacionalidade ?></p>
+    <p style="font-weight: <?= $paisOrigem === 'Brasil' ? 'bold' : 'normal' ?>">País de origem: <?= $paisOrigem ?></p>
+    <p style="color: <?= $nacionalidade === 'Brasileiro' ? 'green' : 'red' ?>">Nacionalidade: <?= $nacionalidade ?></p>
 
   </main>
 </body>

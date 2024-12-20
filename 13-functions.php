@@ -33,9 +33,9 @@
     function variadicParams(...$args)
     {
       foreach ($args as $arg) {
-        echo "<span>$arg | </span>";
+        echo "$arg | ";
       }
-      echo "<span>Número de parâmetros: " . func_num_args();
+      echo "Número de parâmetros: " . func_num_args();
     }
 
     function withReturn($a, $b)

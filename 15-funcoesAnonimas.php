@@ -23,7 +23,7 @@
       echo $param;
     };
 
-    $argumento = function ($arg) {
+    $retorno = function ($arg) {
       return $arg;
     };
 
@@ -34,13 +34,13 @@
     function argFunction($arg)
     {
       echo $arg;
-    }
+    };
 
     ?>
 
     <p>Função anônima simples: <?= $simples() ?></p>
     <p>Função anônima com argumento: <?= $parametro('Com parâmetro') ?></p>
-    <p>Função anônima com retorno: <?= $argumento('Retornando valor') ?></p>
+    <p>Função anônima com retorno: <?= $retorno('Retornando valor') ?></p>
     <p>Função anônima como parâmentro de outra função: <?= argFunction($teste()) ?></p>
 
   </main>

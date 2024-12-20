@@ -1,9 +1,3 @@
-<?php
-
-$frase = 'Uma Frase Para Testes Dos Métodos';
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -18,6 +12,15 @@ $frase = 'Uma Frase Para Testes Dos Métodos';
     <h1>Métodos de Strings</h1>
   </header>
   <main>
+
+    <?php
+
+    $frase = 'Uma Frase Para Testes Dos Métodos';
+
+    $nomeInteiro = 'Andrew Henrique Gomes'
+
+    ?>
+
     <p>Frase: <?= $frase ?></p>
     <p>Letra pelo índice: <?= $frase[1] ?></p>
     <p>Tamanho da string: <?= mb_strlen($frase) ?></p>
@@ -25,7 +28,11 @@ $frase = 'Uma Frase Para Testes Dos Métodos';
     <p>Todas maiúsculas: <?= mb_strtoupper($frase) ?></p>
     <p>Todas minúsculas: <?= mb_strtolower($frase) ?></p>
     <p>Substituir parte: <?= str_replace('Uma Frase', 'Um Texto', $frase) ?></p>
-    <p>Posição no texto: <?= mb_strrpos($frase, 'Métodos') ?></p>
+    <p>Posição no texto: <?= mb_strpos($frase, 'Métodos') ?></p>
+
+    <p>Contém 'Gomes' na string Andrew Henrique Gomes? <?= str_contains($nomeInteiro, 'Gomes') ?></p>
+    <p>Começa com 'A'? <?= str_starts_with($nomeInteiro, 'A') ?></p>
+    <p>Termina com 's'? <?= str_ends_with($nomeInteiro, 's') ?></p>
   </main>
 </body>
 

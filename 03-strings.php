@@ -1,16 +1,3 @@
-<?php
-
-$texto = 'Lista de caracteres';
-$aspasSimples = 'aspas simples';
-$aspasDuplas = "aspas duplas";
-$nome = 'Andrew';
-$acrescentaNaVariavel = $nome .= ' ' . 'Henrique';
-$sobrenome = 'Gomes';
-$nomeConcatenado = $nome . ' ' . $sobrenome;
-$nomeInterpolado = "$nome $sobrenome";
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -25,6 +12,20 @@ $nomeInterpolado = "$nome $sobrenome";
     <h1>Strings no PHP</h1>
   </header>
   <main>
+
+    <?php
+
+    $texto = "Lista de caracteres";
+    $aspasSimples = "aspas simples";
+    $aspasDuplas = "aspas duplas";
+    $nome = "Andrew";
+    $acrescentaNaVariavel = $nome .= " Henrique";
+    $sobrenome = "Gomes";
+    $nomeConcatenado = $nome . " " . $sobrenome;
+    $nomeInterpolado = "$nome $sobrenome";
+
+    ?>
+
     <p>String: <?= $texto ?></p>
     <p>Podem ser escritas com <?= $aspasSimples ?></p>
     <p>Podem ser escritas com <?= $aspasDuplas ?></p>

@@ -1,11 +1,3 @@
-<?php
-
-$numeros = [1, 2, 3, 4, 5];
-$nomes = ['Andrew', 'Viviane', 'Janico', 'Cleusa'];
-$dados = ['nome' => 'Andrew', 'sobrenome' => 'Gomes', 'idade' => 36]
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -20,6 +12,15 @@ $dados = ['nome' => 'Andrew', 'sobrenome' => 'Gomes', 'idade' => 36]
     <h1>Arrays no PHP</h1>
   </header>
   <main>
+
+    <?php
+
+    $numeros = [1, 2, 3, 4, 5];
+    $nomes = ['Andrew', 'Viviane', 'Janico', 'Cleusa'];
+    $dados = ['nome' => 'Andrew', 'sobrenome' => 'Gomes', 'idade' => 36]
+
+    ?>
+
     <p>Array de números: <?= print_r($numeros) ?></p>
     <p>Acessando alguma posição: <?= $numeros[2] ?></p>
     <p>Adicionando último elemento: <?= $numeros[] = 6 ?></p>

@@ -1,16 +1,3 @@
-<?php
-
-$umTexto = 'String é texto';
-$intNum = 56;
-$floatNum = 10.5;
-$negNum = -23;
-$verdadeiro = true;
-$falso = false;
-$nulo = null;
-$lista = [1, 2, 3, 4];
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -25,6 +12,20 @@ $lista = [1, 2, 3, 4];
     <h1>Tipo de Dados no PHP</h1>
   </header>
   <main>
+
+    <?php
+
+    $umTexto = 'String é texto';
+    $intNum = 56;
+    $floatNum = 10.5;
+    $negNum = -23;
+    $verdadeiro = true;
+    $falso = false;
+    $nulo = null;
+    $lista = [1, 2, 3, 4];
+
+    ?>
+
     <p>Lista de caracteres: <?= $umTexto ?></p>
     <p>Número inteiro: <?= $intNum ?></p>
     <p>Número real: <?= $floatNum ?></p>

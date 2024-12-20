@@ -1,10 +1,3 @@
-<?php
-
-$idade = 17;
-$verificaIdade = $idade < 18 ? 'Menor' : 'Maior';
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -19,33 +12,62 @@ $verificaIdade = $idade < 18 ? 'Menor' : 'Maior';
     <h1>If | Else If | Else</h1>
   </header>
   <main>
+
+    <?php
+
+    $nome = 'Viviane';
+    $idade = 21;
+    $verificaIdade = $idade < 18 ? 'Menor' : 'Maior';
+
+    ?>
+
     <h2>if</h2>
 
     <?php
 
+    if ($nome === 'Andrew') {
+      echo "<p>Nome é Andrew</p>";
+    }
+
     if ($idade >= 18) {
-      echo '<p>Maior de idade!</p>';
+      echo "<p>É maior de idade</p>";
     }
 
     ?>
 
     <hr>
+
     <h2>else</h2>
 
     <?php
 
-    if ($idade >= 18) {
-      echo '<p>Maior de idade!</p>';
+    if ($nome === 'Andrew') {
+      echo "<p>Nome é Andrew</p>";
     } else {
-      echo '<p>Menor de idade!</p>';
+      echo "<p>Nome não é Andrew</p>";
+    }
+
+    if ($idade >= 18) {
+      echo "<p>É maior de idade</p>";
+    } else {
+      echo "<p>É menor de idade</p>";
     }
 
     ?>
 
     <hr>
+
     <h2>elseif</h2>
 
     <?php
+
+    if ($nome === 'Andrew') {
+      echo "<p>Nome é Andrew</p>";
+    } elseif ($nome === 'Viviane') {
+      echo "<p>Nome é Viviane</p>";
+    } else {
+      echo "<p>Nome não encontrado</p>";
+    }
 
     if ($idade < 12) {
       echo '<p>Criança!</p>';
@@ -60,6 +82,8 @@ $verificaIdade = $idade < 18 ? 'Menor' : 'Maior';
     }
 
     ?>
+
+    <hr>
 
     <h2>Operador ternário</h2>
 

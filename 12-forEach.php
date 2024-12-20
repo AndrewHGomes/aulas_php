@@ -15,7 +15,7 @@
 
     <?php
 
-    $nomes = ['Irvin', 'Steice', 'Renan', 'Eliza'];
+    $nomes = ['Irvin', 'Steice', 'Renan', 'Eliza', 'Andrew', 'Viviane', 'Rafael'];
     $numeros = [1, 2, 3, 4, 5];
     $capitais = [
       'Brasil' => 'Brasília',
@@ -37,6 +37,40 @@
 
     foreach ($capitais as $key => $value) {
       echo "<p>País: $key | Capital: $value</p>";
+    }
+
+    ?>
+
+    <hr>
+
+    <h2>Break | Continue</h2>
+
+    <?php
+
+    for ($i = 0; $i <= 20; $i++) {
+      if ($i % 2 === 0) {
+        continue;
+      }
+
+      echo "<span> | i = $i</span>";
+
+      if ($i === 15) {
+        break;
+      }
+    }
+
+    echo "<br><br>";
+
+    foreach ($nomes as $nome) {
+      if ($nome === 'Renan') {
+        continue;
+      }
+
+      echo "<span> | $nome</span>";
+
+      if ($nome === 'Viviane') {
+        break;
+      }
     }
 
     ?>

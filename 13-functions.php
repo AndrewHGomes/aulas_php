@@ -12,44 +12,102 @@
     <h1>Functions</h1>
   </header>
   <main>
+    <h2>Função simples</h2>
 
     <?php
 
     function simpleFunction()
     {
-      echo "Olá, Função!";
-    }
-
-    function withParams($a, $b)
-    {
-      echo "Somando $a + $b = " . ($a + $b);
-    }
-
-    function defaultParams($nome = 'Tonto')
-    {
-      echo "Bom dia, $nome!";
-    }
-
-    function variadicParams(...$args)
-    {
-      foreach ($args as $arg) {
-        echo "$arg | ";
-      }
-      echo "Número de parâmetros: " . func_num_args();
-    }
-
-    function withReturn($a, $b)
-    {
-      return $a + $b;
+      echo "Uma função simples";
     }
 
     ?>
 
-    <p>Função simples: <?= simpleFunction() ?></p>
-    <p>Função com parâmetros: <?= withParams(51, 23) ?></p>
-    <p>Função com parâmetro padrão: <?= defaultParams('Henrique') ?> | <?= defaultParams() ?></p>
-    <p>Recebendo vários parâmentros: <?= variadicParams('teste', 50, true) ?></p>
-    <p>Retorno da função: <?= withReturn(11, 11) ?></p>
+    <p>
+      Simples: <?= simpleFunction() ?>
+    </p>
+
+    <hr>
+
+    <h2>Função com parâmetros</h2>
+
+    <?php
+
+    function paramFunction($param)
+    {
+      echo "É um $param que é passado dentro dos parênteses";
+    }
+
+    ?>
+
+    <p>
+      Parâmetro: <?= paramFunction('argumento') ?>
+    </p>
+
+    <hr>
+
+    <h2>Parâmetro opcional</h2>
+
+    <?php
+
+    function optionalParam($arg, $param = 'parâmetro padrão')
+    {
+      echo "Se não for passado $arg, já tem $param para ser trabalhado";
+    }
+
+    ?>
+
+    <p>
+      Versão 1: <?= optionalParam('nada', 'algo') ?>
+    </p>
+
+    <p>
+      Versão 2: <?= optionalParam('argumento') ?>
+    </p>
+
+    <hr>
+
+    <h2>func_get_arg() | func_num_args()</h2>
+
+    <?php
+
+    function umaFuncao($a)
+    {
+      $x = func_get_arg(1);
+      $y = func_get_arg(2);
+      $z = func_get_arg(3);
+
+      echo "$a | $x | $y | $z";
+
+      echo " | Quantidade de argumentos: " . func_num_args();
+    }
+
+    ?>
+
+    <p>
+      Parâmetros/Argumentos: <?= umaFuncao('oi', 56, 'olá', -11) ?>
+    </p>
+
+    <hr>
+
+    <h2>Variadic parameter</h2>
+
+    <?php
+
+    function variosParametros(...$params)
+    {
+      foreach ($params as $arg) {
+        echo " | $arg";
+      }
+    }
+
+    ?>
+
+    <p>Pode receber vários argumentos: <?= variosParametros(1, 'Gomes', -22, 'Sei lá', 'Viviane') ?></p>
+
+    <hr>
+
+    <h2>Return</h2>
 
   </main>
 </body>

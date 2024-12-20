@@ -25,6 +25,12 @@
 
     echo '<hr>';
 
+    for ($i = 0, $x = 3; $i <= 3, $x >= 0; $i++, $x--) {
+      echo "<span> | i = $i enquanto x = $x</span>";
+    }
+
+    echo '<hr>';
+
     $numero = 7;
     $tabuada = '';
 

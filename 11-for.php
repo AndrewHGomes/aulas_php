@@ -16,11 +16,11 @@
     <?php
 
     for ($i = 0; $i <= 2; $i++) {
-      echo "<p>i é $i</p>";
+      echo "<span> | i é $i</span>";
     }
 
     for ($i = 3; $i >= 0; $i--) {
-      echo "<p>i é $i</p>";
+      echo "<span> | i é $i</span>";
     }
 
     echo '<hr>';
@@ -30,7 +30,7 @@
 
     for ($i = 0; $i <= 10; $i++) {
       $tabuada = $numero * $i;
-      echo "<p>$numero x $i = $tabuada</p>";
+      echo "<span> | $numero x $i = $tabuada</span>";
     }
 
     echo '<hr>';

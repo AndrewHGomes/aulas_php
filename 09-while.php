@@ -18,12 +18,12 @@
     $w = 0;
 
     while ($w <= 2) {
-      echo "<p>w é $w</p>";
+      echo "<span> | w é $w</span>";
       $w++;
     }
 
     while ($w >= 1) {
-      echo "<p>w é $w</p>";
+      echo "<span> | w é $w</span>";
       $w--;
     }
 
@@ -34,7 +34,7 @@
 
     while ($w <= 10) {
       $tabuada = $numero * $w;
-      echo "<p>$numero x $w = $tabuada</p>";
+      echo "<span> | $numero x $w = $tabuada</span>";
       $w++;
     }
 

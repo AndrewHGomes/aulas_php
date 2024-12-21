@@ -44,12 +44,10 @@
 
       class ClienteVip extends Cliente
       {
-        protected function confirmaDados()
+        public function confirmaDados()
         {
-          return "$this->nome | $this->email";
+          return $this->nome;
         }
-
-        public
       }
 
       $vip1 = new ClienteVip('Viviane', 'vivi@email.com', 4321);

@@ -1,3 +1,24 @@
+<?php
+
+class Pessoa
+{
+  public string $nome;
+  public int $idade;
+  public string $genero;
+
+  public function andar(): string
+  {
+    return 'Eu estou andando';
+  }
+
+  public function correr(): string
+  {
+    return 'Eu estou correndo';
+  }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -14,68 +35,53 @@
   <main>
 
     <h2>Introdução</h2>
+
     <?php
 
-    class Humano
-    {
-      private $nome, $sobrenome, $idade;
-
-      public function __construct($nome, $sobrenome, $idade)
-      {
-        $this->nome = $nome;
-        $this->sobrenome = $sobrenome;
-        $this->idade = $idade;
-      }
-
-      public function nomeCompleto()
-      {
-        return "$this->nome $this->sobrenome";
-      }
-
-      public function apresentarSe()
-      {
-        return "Eu sou {$this->nomeCompleto()}, tenho $this->idade anos";
-      }
-    }
-
-    $andrew = new Humano('Andrew', 'Gomes', 36);
-    $viviane = new Humano('Viviane', 'Rodrigues', 39);
+    $pessoa1 = new Pessoa;
 
     ?>
 
     <p>
-      1º objeto da classe Humano: <?= $andrew->nomeCompleto() ?>
-    </p>
-    <p>
-      <?= $andrew->apresentarSe() ?>
-    </p>
-    <p>
-      2º objeto da classe Humano: <?= $viviane->nomeCompleto() ?>
-    </p>
-    <p>
-      <?= $viviane->apresentarSe() ?>
+      Classe Pessoa: <?= print_r($pessoa1) ?>
     </p>
 
     <hr>
 
-    <!-- <h2>Classe anônima</h2> -->
+    <h2>Propriedades ou Atributos</h2>
 
     <?php
 
-    // $objeto = new class
-    // {
-    //   public $nome = 'Cadeira';
-    //   public $tipo = 'Madeira';
-
-    //   public function dizerAlgo()
-    //   {
-    //     return "Sou $this->nome, do tipo $this->tipo!";
-    //   }
-    // };
+    $pessoa1->nome = 'Andrew';
+    $pessoa1->idade = 36;
+    $pessoa1->genero = 'Masculino';
 
     ?>
 
-    <!-- <p>Exemplo: <?= $objeto() ?></p> -->
+    <p>
+      Nome: <?= $pessoa1->nome ?>
+    </p>
+    <p>
+      Idade: <?= $pessoa1->idade ?>
+    </p>
+    <p>
+      Gênero: <?= $pessoa1->genero ?>
+    </p>
+
+    <hr>
+
+    <h2>Funções ou Métodos</h2>
+
+    <p>
+      Método andar: <?= $pessoa1->andar() ?>
+    </p>
+    <p>
+      Método correr: <?= $pessoa1->correr() ?>
+    </p>
+
+    <hr>
+
+    <h2>This</h2>
 
   </main>
 </body>

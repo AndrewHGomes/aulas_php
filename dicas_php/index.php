@@ -46,6 +46,8 @@
 
       $nomeArquivo = md5($texto);
 
+      $name = "Mesa_$texto";
+
       $link = "https://agapesi.ddns.com.br/tavernapizzariacaconde/validate.php?mesa=$nomeArquivo";
 
       $file = "$texto.png";
